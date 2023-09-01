@@ -7,7 +7,7 @@ class HeartbeatService {
     def heartbeat() {
         def rez = [:]
 
-        rez["BFF"] = "UP"
+        rez["APP"] = "UP"
         return rez
     }
 }
