@@ -1,3 +1,45 @@
 micronaut:
   application:
     name: heartbeat
+  server:
+    max-request-size: 1MB
+    host: localhost
+    netty:
+      max-header-size: 500KB
+      worker:
+        event-loop-group: other
+    context-path: /wkm/api
+  openapi:
+    property:
+      naming:
+        strategy: KEBAB_CASE
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+  netty:
+    event-loops:
+      other:
+        num-threads: 10
+jackson:
+  serializationInclusion: ALWAYS
+endpoints:
+  info:
+    enabled: true
+    sensitive: false
+  health:
+    enabled: true
+    sensitive: false
+  routes:
+    enabled: true
+    sensitive: false
+  heartbeat1:
+    enabled: true
+    sensitive: false
+  heartbeat2:
+    enabled: true
+    sensitive: false

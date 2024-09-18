@@ -48,7 +48,7 @@ java.lang.NullPointerException: Cannot invoke method heartbeat() on null object
     at org.codehaus.groovy.runtime.NullObject.invokeMethod(NullObject.java:98)
     at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.invokeGroovyObjectInvoker(IndyGuardsFiltersAndSignatures.java:149)
     at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-    at com.example.HeartbeatController.heartbeat(HeartbeatController.groovy:19)
+    at com.example.HeartbeatFieldInjectionController.heartbeat(HeartbeatController.groovy:19)
     at com.example.$HeartbeatController$Definition$Exec.dispatch(Unknown Source)
     at io.micronaut.context.AbstractExecutableMethodsDefinition$DispatchedExecutableMethod.invoke(AbstractExecutableMethodsDefinition.java:442)
     at io.micronaut.context.DefaultBeanContext$BeanExecutionHandle.invoke(DefaultBeanContext.java:3858)
